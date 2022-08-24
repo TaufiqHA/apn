@@ -2,8 +2,8 @@
 
 class Controller 
 {
-	public function view($view)
+	public function view($view, $data = [])
 	{
-		echo "haloo $view";
+		require_once "../app/views/" . $view . ".php";
 	}
 }

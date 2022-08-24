@@ -1,0 +1,24 @@
+{
+  "name": "aplikasi-pengolah-nilai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tailwindcss -i ./src/input.css -o ./public/css/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TaufiqHA/aplikasi-pengolah-nilai.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TaufiqHA/aplikasi-pengolah-nilai/issues"
+  },
+  "homepage": "https://github.com/TaufiqHA/aplikasi-pengolah-nilai#readme",
+  "dependencies": {
+    "tailwindcss": "^3.1.8"
+  }
+}
