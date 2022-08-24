@@ -13,7 +13,7 @@
         <div class="container">
             <div class="flex items-center justify-between relative ">
                 <div class="px-4">
-                    <a href="#home" class="font-bold text-base text-primary block py-6 lg:text-lg">
+                    <a href="#" class="font-bold text-base text-primary block py-6 lg:text-lg">
                         <span>APLIKASI</span>
                         <span>PENGOLAH NILAI</span>
                     </a>
