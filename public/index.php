@@ -1,3 +1,3 @@
 <?php 
 
-echo "hello wordl!";
+require_once "../app/init.php";
