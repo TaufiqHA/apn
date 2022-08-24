@@ -8,8 +8,12 @@
                     <h2 class="font-semibold text-base text-secondary lg:text-lg"> Bpk Abdullah </h2>
                 </div>
                 <div class="w-full px-4 sefl-center flex justify-center flex-wrap lg:w-1/2 lg:justify-evenly">
-                    <div class="w-[214px] h-[176px] border-[0.5px] rounded-[21px] mt-[61px] border-black shadow-xl hover:scale-110 transition duration-300 ease-in-out"></div>
-                    <div class="w-[214px] h-[176px] border-[0.5px] rounded-[21px] mt-[61px] border-black shadow-xl hover:scale-110 transition duration-300 ease-in-out"></div>
+                    <a href="#">
+                        <div class="w-[214px] h-[176px] border-[0.5px] rounded-[21px] mt-[61px] border-black shadow-xl hover:scale-110 transition duration-300 ease-in-out"></div>
+                    </a>
+                    <a href="#">
+                        <div class="w-[214px] h-[176px] border-[0.5px] rounded-[21px] mt-[61px] border-black shadow-xl hover:scale-110 transition duration-300 ease-in-out"></div>
+                    </a>
                 </div>
              </div>
         </div>
