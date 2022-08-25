@@ -37,13 +37,13 @@
                                 <a href="<?php echo BASEURL; ?>/public/siswa/index" class="text-base py-2 mx-8 flex  group-hover:text-primary">Siswa</a>
                             </li>
                             <li class="group">
-                                <a href="#" class="text-base py-2 mx-8 flex  group-hover:text-primary">Clients</a>
+                                <a href="#" class="text-base py-2 mx-8 flex  group-hover:text-primary">UH</a>
                             </li>
                             <li class="group">
-                                <a href="#" class="text-base py-2 mx-8 flex  group-hover:text-primary">Blog</a>
+                                <a href="#" class="text-base py-2 mx-8 flex  group-hover:text-primary">Tugas</a>
                             </li>
                             <li class="group">
-                                <a href="#" class="text-base py-2 mx-8 flex  group-hover:text-primary">Contact</a>
+                                <a href="#" class="text-base py-2 mx-8 flex  group-hover:text-primary">Penilaian</a>
                             </li>
                         </ul>
                     </nav>
