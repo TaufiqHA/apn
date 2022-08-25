@@ -28,13 +28,13 @@
                     <nav id="nav-menu" class="scale-0 absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:scale-100 lg:block lg:static lg:bg-transparent lg:rounded-none lg:shadow-none lg:max-w-full transition duration-300 ease-in-out">
                         <ul class="block lg:flex">
                             <li class="group">
-                                <a href="#" class="text-base py-2 mx-8 flex  group-hover:text-primary">Beranda</a>
+                                <a href="<?php echo BASEURL; ?>/public/home/index" class="text-base py-2 mx-8 flex  group-hover:text-primary">Beranda</a>
                             </li>
                             <li class="group">
-                                <a href="#" class="text-base py-2 mx-8 flex  group-hover:text-primary">Kelas</a>
+                                <a href="<?php echo BASEURL; ?>/public/kelas/index" class="text-base py-2 mx-8 flex  group-hover:text-primary">Kelas</a>
                             </li>
                             <li class="group">
-                                <a href="#" class="text-base py-2 mx-8 flex  group-hover:text-primary">Siswa</a>
+                                <a href="<?php echo BASEURL; ?>/public/siswa/index" class="text-base py-2 mx-8 flex  group-hover:text-primary">Siswa</a>
                             </li>
                             <li class="group">
                                 <a href="#" class="text-base py-2 mx-8 flex  group-hover:text-primary">Clients</a>

@@ -1,15 +1,13 @@
 <?php 
 
-class Kelas
+class Kelas extends Controller
 {
 	public function index()
 	{
-
-	}
-
-	public function listKelas()
-	{
-		
+		$data['judul'] = "Kelas";
+		$this->view('templates/header', $data);
+		$this->view('kelas/index');
+		$this->view('templates/footer');
 	}
 
 	public function inputKelas()
