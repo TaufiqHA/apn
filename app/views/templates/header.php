@@ -43,10 +43,10 @@
                                 <a href="<?php echo BASEURL; ?>/public/tugas/index" class="text-base py-2 mx-8 flex  group-hover:text-primary">Tugas</a>
                             </li>
                             <li class="group">
-                                <a href="#" class="text-base py-2 mx-8 flex  group-hover:text-primary">PTS</a>
+                                <a href="<?php echo BASEURL; ?>/public/pts/index" class="text-base py-2 mx-8 flex  group-hover:text-primary">PTS</a>
                             </li>
                             <li class="group">
-                                <a href="#" class="text-base py-2 mx-8 flex  group-hover:text-primary">PAS</a>
+                                <a href="<?php echo BASEURL; ?>/public/pts/pas" class="text-base py-2 mx-8 flex  group-hover:text-primary">PAS</a>
                             </li>
                         </ul>
                     </nav>
