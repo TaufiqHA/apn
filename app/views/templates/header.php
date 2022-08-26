@@ -13,7 +13,7 @@
         <div class="container">
             <div class="flex items-center justify-between relative ">
                 <div class="px-4">
-                    <a href="#" class="font-bold text-base text-primary block py-6 lg:text-lg">
+                    <a href="<?php echo BASEURL; ?>/public" class="font-bold text-base text-primary block py-6 lg:text-lg">
                         <span>APLIKASI</span>
                         <span>PENGOLAH NILAI</span>
                     </a>
@@ -37,10 +37,10 @@
                                 <a href="<?php echo BASEURL; ?>/public/siswa/index" class="text-base py-2 mx-8 flex  group-hover:text-primary">Siswa</a>
                             </li>
                             <li class="group">
-                                <a href="#" class="text-base py-2 mx-8 flex  group-hover:text-primary">UH</a>
+                                <a href="<?php echo BASEURL; ?>/public/ulangan/index" class="text-base py-2 mx-8 flex  group-hover:text-primary">UH</a>
                             </li>
                             <li class="group">
-                                <a href="#" class="text-base py-2 mx-8 flex  group-hover:text-primary">Tugas</a>
+                                <a href="<?php echo BASEURL; ?>/public/tugas/index" class="text-base py-2 mx-8 flex  group-hover:text-primary">Tugas</a>
                             </li>
                             <li class="group">
                                 <a href="#" class="text-base py-2 mx-8 flex  group-hover:text-primary">Penilaian</a>
