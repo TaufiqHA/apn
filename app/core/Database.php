@@ -16,7 +16,7 @@ class Database
 		$option = [
 			PDO::ATTR_PERSISTENT => true,
 			PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-		]
+		];
 
 		try {
 			$this->dbh = new PDO($dsn, $this->user, $this->pass, $option);
