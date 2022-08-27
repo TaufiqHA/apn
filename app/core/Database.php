@@ -9,7 +9,7 @@ class Database
 	private $user = USER;
 	private $pass = PASS;
 
-	public function construct()
+	public function __construct()
 	{
 		$dsn = "mysql:host=$this->host;dbname=$this->dbname";
 
@@ -27,8 +27,8 @@ class Database
 
 	public function query($query)
 	{
-		$this->stmt = $dbh->prepare($query);
-	}
+		$this->stmt = $this->dbh->prepare($query);
+	}	
 
 	public function bind($param, $value, $type = null)
 	{
