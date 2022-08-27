@@ -24,3 +24,15 @@ $('#hamburger').on('click', function()
     $('#hamburger').toggleClass('hamburger-active');
     $('#nav-menu').toggleClass('scale-100');
 })
+
+$('#button-tambah').on('click', function()
+{
+    $('#modal-box').removeClass('scale-0');
+    $('#modal-box').addClass('scale-1');
+})
+
+$('#close-modal-box').on('click', function()
+{
+    $('#modal-box').removeClass('scale-1');
+    $('#modal-box').addClass('scale-0');
+})
