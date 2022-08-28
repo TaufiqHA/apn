@@ -59,8 +59,13 @@ class Kelas_model
 
 	public function className($data)
 	{
-		$this->db->query('INSERT INTO nama_kelas VALUES ("", :kelas)');
+		$this->db->query('INSERT INTO nama_kelas VALUES ("", :kelas, :pelajaran, :wali, :nip, :semester, :ta)');
 		$this->db->bind('kelas', $data['name']);
+		$this->db->bind('pelajaran', $data['pelajaran']);
+		$this->db->bind('wali', $data['wali']);
+		$this->db->bind('nip', $data['nip']);
+		$this->db->bind('semester', $data['semester']);
+		$this->db->bind('ta', $data['ta']);
 		$this->db->execute();
 	}
 
