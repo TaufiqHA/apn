@@ -11,7 +11,11 @@ class Kelas_model
 
 	public function tambahKelas($data)
 	{
-		$this->db->query('CREATE TABLE ' . $data['name'] . '(id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, name VARCHAR(30))');
+		$this->db->query('CREATE TABLE ' . $data['name'] . '(id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, name VARCHAR(30),
+			nis VARCHAR(6),
+			nisn VARCHAR(20),
+			deskripsi VARCHAR(200))
+			');
 		$this->db->execute();
 		return true;
 	}
