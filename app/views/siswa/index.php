@@ -2,7 +2,7 @@
     <section class="pt-36">
         <div class="container">
             <div class="flex flex-wrap mb-[61px] lg:mb-24">
-                <div class="w-full self-center px-4 lg:w-1/2 lg:pl-20">
+                <div class="w-full self-center px-4 lg:w-1/2 lg:pl-20 lg:self-start lg:mt-20">
                     <h2 class="font-semibold text-xl text-primary lg:text-2xl"> List </h2>
                     <h1 class="font-bold text-5xl mb-2 lg:text-6xl"> Siswa </h1>
                     <h2 class="font-semibold text-base text-secondary lg:text-lg uppercase">Kelas  <?php echo $data['kelas'] ?> </h2>
