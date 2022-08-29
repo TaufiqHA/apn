@@ -37,8 +37,10 @@ class Kelas extends Controller
 	{
 		$data['siswa'] = $_POST;
 		$data['kelas'] = $kelas;
-		$siswa = $this->model('Kelas_model')->tambahSiswa($data);
-		if ($siswa === true) {
+		$siswa = $this->model('Kelas_model');
+		$siswa1 = $siswa->tambahSiswa($data);
+		$siswa->tambahAbsensi($data);
+		if ($siswa1 === true) {
 			$this->inputSiswa($data['kelas']);
 		}
 	}

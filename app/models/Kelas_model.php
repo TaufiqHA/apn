@@ -23,7 +23,7 @@ class Kelas_model
 	public function tambahAbsen($data)
 	{
 		$this->db->query('CREATE TABLE ' . $data['name'] . "_absen" . '(
-			id INT(6),
+			id INT(6) AUTO_INCREMENT PRIMARY KEY,
 			nama VARCHAR(30),
 			nis VARCHAR(6),
 			nisn VARCHAR(20),
@@ -89,5 +89,14 @@ class Kelas_model
 		$this->db->bind('nisn', $data['siswa']['nisn']);
 		$this->db->execute();
 		return true;
+	}
+
+	public function tambahAbsensi($data)
+	{
+		$this->db->query('INSERT INTO ' . $data['kelas'] . "_absen (id, nama, nis, nisn) " . ' VALUES ("", :nama, :nis, :nisn)');
+		$this->db->bind('nama', $data['siswa']['name']);
+		$this->db->bind('nis', $data['siswa']['nis']);
+		$this->db->bind('nisn', $data['siswa']['nisn']);
+		$this->db->execute();
 	}
 }
