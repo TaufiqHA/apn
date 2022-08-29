@@ -35,9 +35,6 @@
                                 <a href="<?php echo BASEURL; ?>/public/kelas/index" class="text-base py-2 mx-8 flex  group-hover:text-primary">Kelas</a>
                             </li>
                             <li class="group">
-                                <a href="<?php echo BASEURL; ?>/public/siswa/index" class="text-base py-2 mx-8 flex  group-hover:text-primary">Siswa</a>
-                            </li>
-                            <li class="group">
                                 <a href="<?php echo BASEURL; ?>/public/ulangan/index" class="text-base py-2 mx-8 flex  group-hover:text-primary">UH</a>
                             </li>
                             <li class="group">

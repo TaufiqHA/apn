@@ -23,9 +23,14 @@ class Kelas extends Controller
 			}
 	}
 
-	public function inputSiswa()
+	public function inputSiswa($kelas)
 	{
-
+		$data['judul'] = 'Siswa';
+		$data['siswa'] = $this->model('Kelas_model')->getDataSiswa($kelas);
+		$data['kelas'] = $kelas;
+		$this->view('templates/header', $data);
+		$this->view('siswa/index', $data);
+		$this->view('templates/footer');
 	}
 
 	public function listKelas()

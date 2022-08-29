@@ -9,9 +9,11 @@
                 <div class="w-full self-center px-4 mt-20 md:w-1/2 lg:w-1/2 flex flex-col items-center">
                         <?php if (!empty($data['class'])) : ?>
                             <?php foreach($data['class'] as $kelas) : ?>
-                                <div class="w-[287px] h-[53px] rounded-full border-[0.5px] border-black px-2 flex items-center relative mb-7 shadow-xl">
-                                    <span class="float-left pl-2 font-bold text-lg uppercase text-dark"> Kelas <?php echo $kelas['kelas'] ?> </span>
-                                </div>
+                                <a href="<?php echo BASEURL; ?>/public/kelas/inputSiswa/<?php echo $kelas['kelas'] ?>">
+                                     <div class="w-[287px] h-[53px] rounded-full border-[0.5px] border-black px-2 flex items-center relative mb-7 shadow-xl">
+                                        <span class="float-left pl-2 font-bold text-lg uppercase"> Kelas  <?php echo $kelas['kelas'] ?> </span>
+                                    </div>
+                                </a>
                             <?php endforeach; ?>
                         <?php endif; ?>
                         <?php if (empty($data['class'])) : ?>

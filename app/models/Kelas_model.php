@@ -74,4 +74,10 @@ class Kelas_model
 		$this->db->query('SELECT * FROM nama_kelas');
 		return $this->db->resultSet();
 	}
+
+	public function getDataSiswa($kelas)
+	{
+		$this->db->query('SELECT * FROM ' . $kelas);
+		return $this->db->resultSet();
+	}
 }
