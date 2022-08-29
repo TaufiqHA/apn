@@ -17,10 +17,12 @@ class Absensi_model
 
 	public function ubahAbsen($data)
 	{
-		$this->db->query('UPDATE ' . $data['kelas'] . '_absen ' . ' SET ' . $data['siswa']['absen'] . ' = :absen WHERE id = :id');
-		$this->db->bind('id', $data['siswa']['id']);
-		$this->db->bind('absen', $data['siswa']['nilai']);
-		$this->db->execute();
+		for ($i=1; $i <= sizeof($data['count']); $i++) { 
+			$this->db->query('UPDATE ' . $data['kelas'] . '_absen ' . ' SET ' . $data['siswa']['absen'] . ' = :absen WHERE id = :id;');
+			$this->db->bind('absen', $data['siswa']['nilai' . $i]);
+			$this->db->bind('id', $data['siswa']['id' . $i]);
+			$this->db->execute();
+		}
 		return true;
 	}
 }

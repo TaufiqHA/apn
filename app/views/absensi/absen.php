@@ -2,7 +2,7 @@
     <section class="pt-36">
         <div class="container">
             <div class="flex flex-wrap mb-[61px] lg:mb-24">
-                <div class="w-full self-center px-4 lg:w-1/2 lg:pl-20">
+                <div class="w-full self-center px-4 lg:w-1/2 lg:pl-20 lg:self-start lg:mt-20">
                     <h2 class="font-semibold text-xl text-primary lg:text-2xl"> Absensi </h2>
                     <h1 class="font-bold text-5xl mb-2 lg:text-6xl"> Kelas </h1>
                     <h2 class="font-semibold text-base text-secondary lg:text-lg uppercase"><?php echo $data['kelas'] ?> </h2>
@@ -40,11 +40,11 @@
                     </select>
                     <?php if (!empty($data['siswa'])) : ?>
                         <?php foreach($data['siswa'] as $siswa) : ?>
-                            <input type="hidden" name="id" value="<?php echo $siswa['id'] ?>">
+                            <input type="hidden" name="id<?php echo $siswa['id'] ?>" value="<?php echo $siswa['id'] ?>">
                             <a href="#">
                                  <div class="w-[300px] h-[53px] rounded-full border-[0.5px] border-black px-2 flex items-center relative mb-7 shadow-xl">
                                     <span class="float-left pl-2 font-bold text-sm text-slate-600 uppercase"><?php echo $siswa['nama'] ?></span>
-                                    <input type="text" name="nilai" class="w-[35px] h-[35px] rounded-full absolute right-4 border border-slate-500 outline-none text-center">
+                                    <input type="text" name="nilai<?php echo $siswa['id'] ?>" class="w-[35px] h-[35px] rounded-full absolute right-4 border border-slate-500 outline-none text-center" autocomplete="off">
                                 </div>
                             </a>
                         <?php endforeach; ?>
