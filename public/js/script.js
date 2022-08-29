@@ -43,7 +43,7 @@ $('#button-tambah-siswa').on('click', function()
     $('#modal-box-siswa').addClass('scale-1');
 })
 
-$('#close-modal-box').on('click', function()
+$('#close-modal-box-siswa').on('click', function()
 {
     $('#modal-box-siswa').removeClass('scale-1');
     $('#modal-box-siswa').addClass('scale-0');
