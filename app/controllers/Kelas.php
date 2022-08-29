@@ -33,8 +33,13 @@ class Kelas extends Controller
 		$this->view('templates/footer');
 	}
 
-	public function listKelas()
+	public function tambahSiswa($kelas)
 	{
-		
+		$data['siswa'] = $_POST;
+		$data['kelas'] = $kelas;
+		$siswa = $this->model('Kelas_model')->tambahSiswa($data);
+		if ($siswa === true) {
+			$this->inputSiswa($data['kelas']);
+		}
 	}
 }

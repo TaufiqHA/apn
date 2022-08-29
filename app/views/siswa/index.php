@@ -10,7 +10,7 @@
                 <div class="w-full self-center px-4 mt-20 md:w-1/2 lg:w-1/2 flex flex-col items-center">
                     <?php if (!empty($data['siswa'])) : ?>
                         <?php foreach($data['siswa'] as $siswa) : ?>
-                            <a href="<?php echo BASEURL; ?>/public/kelas/inputSiswa/<?php echo $kelas['kelas'] ?>">
+                            <a href="#">
                                  <div class="w-[287px] h-[53px] rounded-full border-[0.5px] border-black px-2 flex items-center relative mb-7 shadow-xl">
                                     <span class="float-left pl-2 font-bold text-sm uppercase"><?php echo $siswa['name'] ?> </span>
                                 </div>
@@ -30,10 +30,10 @@
     <!-- hero section end -->
 
     <!-- modal-box start -->
-    <div class="modal w-[300px] right-1/2 translate-x-1/2 absolute flex justify-center top-96 scale-0 transition duration-300 lg:w-[500px]" id="modal-box-siswa">
+    <div class=" w-[300px] right-1/2 translate-x-1/2 absolute flex justify-center top-96 scale-0 transition duration-300 lg:w-[500px]" id="modal-box-siswa">
         <div class="w-full bg-slate-200 self-center absolute p-5 rounded-xl shadow-2xl flex justify-center">
             <img src="<?php echo BASEURL; ?>/public/img/close.svg" alt="..." class="absolute right-3 top-3 cursor-pointer w-[20px] lg:w-[25px]" id="close-modal-box-siswa">
-            <form action="<?php echo BASEURL; ?>/public/kelas/inputKelas" method="post" class="w-full px-8 flex flex-col items-center">
+            <form action="<?php echo BASEURL; ?>/public/kelas/tambahSiswa/<?php echo $data['kelas'] ?>" method="post" class="w-full px-8 flex flex-col items-center">
                 <h2 class="font-semibold mb-3 text-primary lg:font-bold ">TAMBAH SISWA</h2>
                 <label for="name" class="w-full font-semibold text-dark mb-3 block text-lg">Nama</label>
                 <input type="text" name="name" class="w-full outline-none rounded-xl py-1 px-4 focus:ring-1 focus:ring-primary focus:border-primary focus:border text-primary block mb-3" autocomplete="off">

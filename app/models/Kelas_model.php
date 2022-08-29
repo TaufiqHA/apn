@@ -80,4 +80,14 @@ class Kelas_model
 		$this->db->query('SELECT * FROM ' . $kelas);
 		return $this->db->resultSet();
 	}
+
+	public function tambahSiswa($data)
+	{
+		$this->db->query('INSERT INTO ' . $data['kelas'] . ' VALUES ("", :name, :nis, :nisn, "")');
+		$this->db->bind('name', $data['siswa']['name']);
+		$this->db->bind('nis', $data['siswa']['nis']);
+		$this->db->bind('nisn', $data['siswa']['nisn']);
+		$this->db->execute();
+		return true;
+	}
 }
