@@ -29,7 +29,7 @@
     <!-- hero section end -->
 
     <!-- modal-box start -->
-    <div class="modal w-[300px] right-1/2 translate-x-1/2 absolute flex justify-center top-96 scale-0 transition duration-300 lg:w-[500px]" id="modal-box">
+    <div class="modal w-[300px] right-1/2 translate-x-1/2 absolute flex justify-center top-96 mt-5 scale-0 transition duration-300 lg:w-[500px]" id="modal-box">
         <div class="w-full bg-slate-200 self-center absolute p-5 rounded-xl shadow-2xl flex justify-center">
             <img src="<?php echo BASEURL; ?>/public/img/close.svg" alt="..." class="absolute right-3 top-3 cursor-pointer w-[20px] lg:w-[25px]" id="close-modal-box">
             <form action="<?php echo BASEURL; ?>/public/kelas/inputKelas" method="post" class="w-full px-8 flex flex-col items-center">

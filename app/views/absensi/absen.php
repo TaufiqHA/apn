@@ -10,7 +10,7 @@
                 <div class="w-full self-center px-4 mt-20 md:w-1/2 lg:w-1/2 flex flex-col items-center">
                     <form action="<?php echo BASEURL; ?>/public/absensi/updateAbsen/<?php echo $data['kelas'] ?>" method="post">
                     <label for="absen">Pertemuan ke:</label>
-                    <select name="absen" id="absen" class="mb-5">
+                    <select name="absen" id="absen" class="mb-5 bg-transparent">
                         <option value="p1">1</option>
                         <option value="p2">2</option>
                         <option value="p3">3</option>
@@ -44,7 +44,7 @@
                             <a href="#">
                                  <div class="w-[300px] h-[53px] rounded-full border-[0.5px] border-black px-2 relative mb-7 shadow-xl">
                                     <span class="float-left pl-2 font-bold text-sm text-slate-600 uppercase translate-y-1/2 mt-2"><?php echo $siswa['nama'] ?></span>
-                                    <select name="nilai<?php echo $siswa['id'] ?>" class="float-right translate-y-1/2 ">
+                                    <select name="nilai<?php echo $siswa['id'] ?>" class="float-right translate-y-1/2 bg-transparent">
                                         <option value="H">H</option>
                                         <option value="A">A</option>
                                         <option value="S">S</option>
