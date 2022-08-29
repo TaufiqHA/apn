@@ -42,9 +42,14 @@
                         <?php foreach($data['siswa'] as $siswa) : ?>
                             <input type="hidden" name="id<?php echo $siswa['id'] ?>" value="<?php echo $siswa['id'] ?>">
                             <a href="#">
-                                 <div class="w-[300px] h-[53px] rounded-full border-[0.5px] border-black px-2 flex items-center relative mb-7 shadow-xl">
-                                    <span class="float-left pl-2 font-bold text-sm text-slate-600 uppercase"><?php echo $siswa['nama'] ?></span>
-                                    <input type="text" name="nilai<?php echo $siswa['id'] ?>" class="w-[35px] h-[35px] rounded-full absolute right-4 border border-slate-500 outline-none text-center" autocomplete="off">
+                                 <div class="w-[300px] h-[53px] rounded-full border-[0.5px] border-black px-2 relative mb-7 shadow-xl">
+                                    <span class="float-left pl-2 font-bold text-sm text-slate-600 uppercase translate-y-1/2 mt-2"><?php echo $siswa['nama'] ?></span>
+                                    <select name="nilai<?php echo $siswa['id'] ?>" class="float-right translate-y-1/2 ">
+                                        <option value="H">H</option>
+                                        <option value="A">A</option>
+                                        <option value="S">S</option>
+                                        <option value="I">I</option>
+                                    </select>
                                 </div>
                             </a>
                         <?php endforeach; ?>
