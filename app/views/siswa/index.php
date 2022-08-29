@@ -11,8 +11,8 @@
                     <?php if (!empty($data['siswa'])) : ?>
                         <?php foreach($data['siswa'] as $siswa) : ?>
                             <a href="#">
-                                 <div class="w-[287px] h-[53px] rounded-full border-[0.5px] border-black px-2 flex items-center relative mb-7 shadow-xl">
-                                    <span class="float-left pl-2 font-bold text-sm uppercase"><?php echo $siswa['name'] ?> </span>
+                                 <div class="w-[300px] h-[53px] rounded-full border-[0.5px] border-black px-2 flex items-center relative mb-7 shadow-xl">
+                                    <span class="float-left pl-2 font-bold text-sm text-slate-600 uppercase"><?php echo $siswa['name'] ?> </span>
                                 </div>
                             </a>
                         <?php endforeach; ?>

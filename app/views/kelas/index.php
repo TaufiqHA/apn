@@ -11,7 +11,7 @@
                             <?php foreach($data['class'] as $kelas) : ?>
                                 <a href="<?php echo BASEURL; ?>/public/kelas/inputSiswa/<?php echo $kelas['kelas'] ?>">
                                      <div class="w-[287px] h-[53px] rounded-full border-[0.5px] border-black px-2 flex items-center relative mb-7 shadow-xl">
-                                        <span class="float-left pl-2 font-bold text-lg uppercase"> Kelas  <?php echo $kelas['kelas'] ?> </span>
+                                        <span class="float-left pl-2 font-bold text-lg text-slate-600 uppercase"> Kelas  <?php echo $kelas['kelas'] ?> </span>
                                     </div>
                                 </a>
                             <?php endforeach; ?>
