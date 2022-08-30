@@ -8,18 +8,18 @@
                     <h2 class="font-semibold text-base text-secondary lg:text-lg"> Semester </h2>
                 </div>
                 <div class="w-full self-center px-4 mt-20 flex justify-center items-center flex-col md:w-1/2 lg:w-1/2">
-                    <div class="w-[287px] h-[53px] rounded-full border-[0.5px] border-black px-2 flex items-center relative mb-7 shadow-xl">
-                        <span class="float-left pl-2 font-bold text-lg"> Siswa A </span>
-                        <div class="w-[35px] h-[35px] rounded-full bg-slate-400 absolute right-4"></div>
-                    </div>
-                    <div class="w-[287px] h-[53px] rounded-full border-[0.5px] border-black px-2 flex items-center relative mb-7 shadow-xl">
-                        <span class="float-left pl-2 font-bold text-lg"> Siswa B </span>
-                        <div class="w-[35px] h-[35px] rounded-full bg-slate-400 absolute right-4"></div>
-                    </div>
-                    <div class="w-[287px] h-[53px] rounded-full border-[0.5px] border-black px-2 flex items-center relative shadow-xl">
-                        <span class="float-left pl-2 font-bold text-lg"> Siswa C </span>
-                        <div class="w-[35px] h-[35px] rounded-full bg-slate-400 absolute right-4"></div>
-                    </div>
+                   <?php if (!empty($data['class'])) : ?>
+                            <?php foreach($data['class'] as $kelas) : ?>
+                                <a href="<?php echo BASEURL; ?>/public/pts/listSiswa/<?php echo $kelas['kelas'] ?>">
+                                     <div class="w-[287px] h-[53px] rounded-full border-[0.5px] border-black px-2 flex items-center relative mb-7 shadow-xl">
+                                        <span class="float-left pl-2 font-bold text-lg text-slate-600 uppercase"> Kelas  <?php echo $kelas['kelas'] ?> </span>
+                                    </div>
+                                </a>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                        <?php if (empty($data['class'])) : ?>
+                            <p class="text-center text-[13px] opacity-60">" Belum ada kelas yang ditambahkan "</p>
+                        <?php endif; ?>
                 </div>
              </div>
         </div>
