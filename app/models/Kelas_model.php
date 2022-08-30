@@ -107,4 +107,13 @@ class Kelas_model
 		$this->db->bind('nisn', $data['siswa']['nisn']);
 		$this->db->execute();
 	}
+
+	public function hapus($data)
+	{	
+		$kelas = $data['kelas'];
+		$this->db->query('DROP TABLE ' . $kelas . '; DROP TABLE ' . $kelas . '_absen; DELETE FROM nama_kelas WHERE kelas = :kelas;');
+		$this->db->bind('kelas', $kelas);
+		$this->db->execute();
+		return true;
+	}
 }

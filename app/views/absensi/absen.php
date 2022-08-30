@@ -59,7 +59,7 @@
                         <p class="text-center text-[13px] opacity-60">" Belum ada siswa yang ditambahkan "</p>
                     <?php endif; ?>
                     <div class="flex justify-center">
-                        <button class="font-bold text-white flex justify-center items-center mt-20 text-center w-[246px] h-[47px] bg-teal-500 rounded-full shadow-lg shadow-slate-300 hover:scale-110 transition duration-300" type="submit">SIMPAN</button>
+                        <button class="font-bold text-white flex justify-center items-center mt-20 text-center w-[246px] h-[47px] bg-teal-500 rounded-full shadow-lg shadow-slate-300 hover:scale-110 transition duration-300" type="submit" onclick="return confirm('anda yakin ingin menyimpan')">SIMPAN</button>
                     </div>
                 </form>
                 </div>

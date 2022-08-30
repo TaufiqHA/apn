@@ -9,11 +9,12 @@
                 <div class="w-full self-center px-4 mt-20 md:w-1/2 lg:w-1/2 flex flex-col items-center">
                         <?php if (!empty($data['class'])) : ?>
                             <?php foreach($data['class'] as $kelas) : ?>
-                                <a href="<?php echo BASEURL; ?>/public/kelas/inputSiswa/<?php echo $kelas['kelas'] ?>">
                                      <div class="w-[287px] h-[53px] rounded-full border-[0.5px] border-black px-2 flex items-center relative mb-7 shadow-xl">
+                                    <a href="<?php echo BASEURL; ?>/public/kelas/inputSiswa/<?php echo $kelas['kelas'] ?>">
                                         <span class="float-left pl-2 font-bold text-lg text-slate-600 uppercase"> Kelas  <?php echo $kelas['kelas'] ?> </span>
+                                    </a>
+                                        <div class="w-[35px] h-[35px] rounded-full text-red absolute right-4"><a href="<?php echo BASEURL; ?>/public/kelas/hapus/<?php echo $kelas['kelas'] ?>" onclick="return confirm('anda yakin ingin manghapus kelas ini?')"><img src="<?php echo BASEURL; ?>/public/img/trush.svg"></a></div>
                                     </div>
-                                </a>
                             <?php endforeach; ?>
                         <?php endif; ?>
                         <?php if (empty($data['class'])) : ?>

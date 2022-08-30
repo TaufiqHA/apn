@@ -44,4 +44,13 @@ class Kelas extends Controller
 			$this->inputSiswa($data['kelas']);
 		}
 	}
+
+	public function hapus($kelas)
+	{
+		$data['kelas'] = $kelas;
+		$hapus = $this->model('Kelas_model')->hapus($data);
+		if ($hapus === true) {
+			$this->index();
+		}
+	}
 }
