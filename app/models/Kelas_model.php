@@ -14,6 +14,14 @@ class Kelas_model
 		$this->db->query('CREATE TABLE ' . $data['name'] . '(id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, name VARCHAR(30),
 			nis VARCHAR(6),
 			nisn VARCHAR(20),
+			uh1 VARCHAR(5),
+			uh2 VARCHAR(5),
+			uh3 VARCHAR(5),
+			t1 VARCHAR(5),
+			t2 VARCHAR(5),
+			t3 VARCHAR(5),
+			pts VARCHAR(5),
+			pas VARCHAR(5),
 			deskripsi VARCHAR(200))
 			');
 		$this->db->execute();
@@ -83,7 +91,7 @@ class Kelas_model
 
 	public function tambahSiswa($data)
 	{
-		$this->db->query('INSERT INTO ' . $data['kelas'] . ' VALUES ("", :name, :nis, :nisn, "")');
+		$this->db->query('INSERT INTO ' . $data['kelas'] . '(id, name, nis, nisn) VALUES ("", :name, :nis, :nisn)');
 		$this->db->bind('name', $data['siswa']['name']);
 		$this->db->bind('nis', $data['siswa']['nis']);
 		$this->db->bind('nisn', $data['siswa']['nisn']);
