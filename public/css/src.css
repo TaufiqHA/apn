@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply w-full;
+  height: 793px;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  @apply text-[7px] font-serif font-semibold;
+}
+
+th,
+td {
+  padding: 3px;
+  @apply px-2;
+}
+
+th {
+  @apply bg-slate-300;
+}

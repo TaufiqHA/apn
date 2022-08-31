@@ -21,6 +21,14 @@ class Absensi extends Controller
 		$this->view('templates/footer');
 	}
 
+	public function cetak($kelas)
+	{
+		$absen = $this->model('Absensi_model');
+		$data['siswa'] = $absen->getDataSiswa($kelas);
+		$data['kelas'] = $absen->getClassByName($kelas);
+		$this->view('absensi/cetak', $data);
+	}
+
 	public function updateAbsen($kelas)
 	{
 		$data['kelas'] = $kelas;

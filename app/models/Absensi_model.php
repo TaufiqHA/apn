@@ -25,4 +25,11 @@ class Absensi_model
 		}
 		return true;
 	}
+
+	public function getClassByName($kelas)
+	{
+		$this->db->query('SELECT * FROM nama_kelas WHERE kelas = :kelas');
+		$this->db->bind('kelas', $kelas);
+		return $this->db->single();
+	}
 }
