@@ -13,7 +13,9 @@
                             <img src="<?php echo BASEURL; ?>/public/img/task.jpg">
                         </div>
                     </a>
-                    <div class="w-[214px] h-[176px] border-[0.5px] rounded-[21px] mt-[61px] border-black shadow-xl hover:scale-110 transition duration-300 ease-in-out" id="download-button"></div>
+                    <div class="w-[214px] h-[176px] border-[0.5px] rounded-[21px] mt-[61px] border-black shadow-xl hover:scale-110 transition duration-300 ease-in-out overflow-hidden" id="download-button">
+                        <img src="<?php echo BASEURL; ?>/public/img/grade.png">
+                    </div>
                 </div>
              </div>
         </div>
@@ -26,10 +28,14 @@
             <img src="<?php echo BASEURL; ?>/public/img/close.svg" alt="..." class="absolute right-3 top-3 cursor-pointer w-[20px] lg:w-[25px]" id="close-button">
             <h2 class="font-semibold mb-3 text-primary lg:font-bold ">CETAK</h2>
             <div class="flex justify-center">
-                <button class="font-bold text-white flex justify-center items-center mt-20 text-center w-[246px] h-[47px] bg-primary rounded-full shadow-lg shadow-slate-300 hover:scale-110 transition duration-300">REKAP NILAI</button>
+                <a href="#">
+                    <button class="font-bold text-white flex justify-center items-center mt-10 text-center w-[246px] h-[47px] bg-primary rounded-full shadow-lg shadow-slate-300 hover:scale-110 transition duration-300">REKAP NILAI</button>
+                </a>
             </div>
             <div class="flex justify-center">
-                <button class="font-bold text-white flex justify-center items-center mt-5 mb-10  text-center w-[246px] h-[47px] bg-primary rounded-full shadow-lg shadow-slate-300 hover:scale-110 transition duration-300">NILAI AKHIR</button>
+                <a href="#">
+                    <button class="font-bold text-white flex justify-center items-center mt-5 mb-10  text-center w-[246px] h-[47px] bg-primary rounded-full shadow-lg shadow-slate-300 hover:scale-110 transition duration-300">NILAI AKHIR</button>
+                </a>
             </div>
         </div>
     </div>
