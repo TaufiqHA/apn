@@ -590,8 +590,8 @@ video {
   margin-right: auto;
 }
 
-.mt-5 {
-  margin-top: 1.25rem;
+.mt-0 {
+  margin-top: 0px;
 }
 
 .mt-10 {
@@ -602,16 +602,12 @@ video {
   margin-left: 1.25rem;
 }
 
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
 .mb-14 {
   margin-bottom: 3.5rem;
-}
-
-.mt-1 {
-  margin-top: 0.25rem;
-}
-
-.mt-0 {
-  margin-top: 0px;
 }
 
 .flex {
@@ -682,9 +678,6 @@ th,
 td {
   border: 1px solid black;
   border-collapse: collapse;
-  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  font-size: 7px;
-  font-weight: 600;
 }
 
 th,
@@ -697,4 +690,16 @@ td {
 th {
   --tw-bg-opacity: 1;
   background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+}
+
+.tabel {
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 7px;
+  font-weight: 600;
+}
+
+.tabel_nilai {
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 12px;
+  font-weight: 600;
 }

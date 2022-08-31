@@ -12,7 +12,6 @@ th,
 td {
   border: 1px solid black;
   border-collapse: collapse;
-  @apply text-[7px] font-serif font-semibold;
 }
 
 th,
@@ -23,4 +22,12 @@ td {
 
 th {
   @apply bg-slate-300;
+}
+
+.tabel {
+  @apply text-[7px] font-serif font-semibold;
+}
+
+.tabel_nilai {
+  @apply text-[12px] font-serif font-semibold;
 }
