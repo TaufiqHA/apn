@@ -126,8 +126,8 @@
                 <div class="w-1/2 font-semibold font-serif text-[12px] ">
                     <h2>Mengetahui;</h2>
                     <h2 class="mb-14">Kepala Sekolah</h2>
-                    <h2>Hj. SYAMSIAL SYAHRUN, S.Pd, M.Pd</h2>
-                    <h2>NIP : 19721225 200605 1 001</h2>
+                    <h2>Hj. SYAMSIAR SYAHRUL, S.Pd, M.Pd</h2>
+                    <h2>NIP : 19640212 198206 2 001</h2>
                 </div>
                 <div class="w-1/2 font-semibold font-serif text-[12px] pl-48">
                     <h2>Malakaji 13 juli 2022</h2>
