@@ -26,6 +26,8 @@ class Absensi extends Controller
 		$absen = $this->model('Absensi_model');
 		$data['siswa'] = $absen->getDataSiswa($kelas);
 		$data['kelas'] = $absen->getClassByName($kelas);
+		$tanggal = date('d F Y');
+		$data['tanggal'] = $this->model('Kelas_model')->tgl_indo($tanggal);
 		$this->view('absensi/cetak', $data);
 	}
 

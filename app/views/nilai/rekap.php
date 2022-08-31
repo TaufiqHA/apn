@@ -53,9 +53,10 @@
                 <th  width="100px">NIS</th>
                 <th width="100px">NISN</th>
             </tr>
+            <?php $i = 1 ?>
            <?php foreach ($data['siswa'] as $siswa) : ?>
                 <tr>
-                <td>1</td>
+                <td><?php echo $i++ ?></td>
                 <td><?php echo $siswa['nis'] ?></td>
                 <td><?php echo $siswa['nisn'] ?></td>
                 <td><?php echo $siswa['name'] ?></td>

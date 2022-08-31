@@ -116,4 +116,25 @@ class Kelas_model
 		$this->db->execute();
 		return true;
 	}
+
+	public function tgl_indo($tanggal)
+	{
+		$bulan = [
+			'January' => 'Januari',
+			'February' => 'Februari',
+			'March' => 'Maret',
+			'April' => 'April',
+			'May' => 'Mei',
+			'June' => 'Juni',
+			'July' => 'Juli',
+			'August' => 'Agustus',
+			'September' => 'September',
+			'October' => 'Oktober',
+			'November' => 'November',
+			'December' => 'Desember'
+		];
+
+		$split = explode(" ", $tanggal);
+		return $split[0] . " " . $bulan[$split[1]] . " " . $split[2];
+	}
 }

@@ -13,7 +13,7 @@
             <div class="judul flex flex-col items-center">
                 <h1 class="font-bold font-serif text-md">DAFTAR NILAI AKHIR PESERTA DIDIK</h1>
                 <h1 class="font-bold font-serif text-sm">SMP NEGERI 1 TOMPOBULU</h1>
-                <h1 class="font-bold font-serif text-sm">TAHUN PELAJARAN : 2020/2021</h1>
+                <h1 class="font-bold font-serif text-sm">TAHUN PELAJARAN : <?php echo $data['kelas']['ta'] ?></h1>
             </div>
         </div>
     </section>
@@ -27,12 +27,12 @@
                     <h2 class="font-bold font-serif text-[12px]">Guru Mata Pelajaran</h2>
                     <h2 class="font-bold font-serif text-[12px]">Kriteria Belajar Minimum</h2>
                 </div>
-                <div class="ml-5 text-[12px] ">
-                    <p>:</p>
-                    <p>:</p>
-                    <p>:</p>
-                    <p>:</p>
-                    <p>:</p>
+                <div class="ml-5 text-[12px] font-bold font-serif">
+                    <p>: <?php echo $data['kelas']['kelas'] ?></p>
+                    <p>: <?php echo $data['kelas']['semester'] ?></p>
+                    <p>: <?php echo $data['kelas']['mt'] ?></p>
+                    <p>: <?php echo $data['kelas']['wk'] ?></p>
+                    <p>: 60</p>
                 </div>
             </div>
         </div>
@@ -56,6 +56,21 @@
                 <th>Predikat</th>
                 <th width="200px">Deskripsi</th>
             </tr>
+            <?php $i = 1 ?>
+            <?php foreach ($data['siswa'] as $siswa) : ?>
+                <tr>
+                    <td><?php echo  $i++ ?></td>
+                    <td><?php echo $siswa['nis'] ?></td>
+                    <td><?php echo $siswa['nisn'] ?></td>
+                    <td><?php echo $siswa['name'] ?></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            <?php endforeach; ?>
         </table>
     </section>
 </body>

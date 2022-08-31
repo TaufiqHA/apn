@@ -80,9 +80,10 @@
                 <th>I</th>
                 <th>S</th>
             </tr>
+            <?php $i = 1 ?>
             <?php foreach ($data['siswa'] as $siswa) : ?>
                 <tr>
-                    <td>1</td>
+                    <td><?php echo $i++ ?></td>
                     <td><?php echo $siswa['nis'] ?></td>
                     <td><?php echo $siswa['nisn'] ?></td>
                     <td><?php echo $siswa['nama'] ?></td>
@@ -130,10 +131,10 @@
                     <h2>NIP : 19640212 198206 2 001</h2>
                 </div>
                 <div class="w-1/2 font-semibold font-serif text-[12px] pl-48">
-                    <h2>Malakaji 13 juli 2022</h2>
+                    <h2>Malakaji <?php echo $data['tanggal'] ?></h2>
                     <h2 class="mb-14">Guru Mata Pelajaran</h2>
-                    <h2>Abdullah, A.Md</h2>
-                    <h2>NIP : 19721225 200605 1 001</h2>
+                    <h2><?php echo $data['kelas']['wk'] ?></h2>
+                    <h2>NIP : <?php echo $data['kelas']['nip'] ?></h2>
                 </div>
             </div>
         </div>

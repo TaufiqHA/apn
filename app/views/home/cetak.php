@@ -9,8 +9,8 @@
                 <div class="w-full self-center px-4 mt-20 flex justify-center items-center flex-col md:w-1/2 lg:w-1/2">
                     <?php if (!empty($data['class'])) : ?>
                             <?php foreach($data['class'] as $kelas) : ?>
-                                     <div class="w-[287px] h-[53px] rounded-full border-[0.5px] border-black px-2 flex items-center relative mb-7 shadow-xl" id="download-button">
-                                        <span class="float-left pl-2 font-bold text-lg text-slate-600 uppercase"> Kelas  <?php echo $kelas['kelas'] ?> </span>
+                                     <div class="w-[287px] h-[53px] rounded-full border-[0.5px] border-black px-2 flex items-center relative mb-7 shadow-xl hover:cursor-pointer" id="download-button">
+                                        <span class="float-left pl-2 font-bold text-lg text-slate-600 uppercase hover:cursor-pointer"> Kelas  <?php echo $kelas['kelas'] ?> </span>
                                     </div>
                                         <!-- modal-box start -->
                                     <div class=" w-[300px] right-1/2 translate-x-1/2 absolute flex justify-center top-96 scale-0 transition duration-300 lg:w-[500px]" id="unduh">
@@ -23,7 +23,7 @@
                                                 </a>
                                             </div>
                                             <div class="flex justify-center">
-                                                <a href="<?php echo BASEURL; ?>/public/nilai/nilai_akhir/<?php echo $kelas['kelas'] ?>nilai_akhir" target="_blank">
+                                                <a href="<?php echo BASEURL; ?>/public/nilai/nilai_akhir/<?php echo $kelas['kelas'] ?>" target="_blank">
                                                     <button class="font-bold text-white flex justify-center items-center mt-5 mb-10  text-center w-[246px] h-[47px] bg-primary rounded-full shadow-lg shadow-slate-300 hover:scale-110 transition duration-300">NILAI AKHIR</button>
                                                 </a>
                                             </div>

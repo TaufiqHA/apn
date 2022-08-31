@@ -39,7 +39,7 @@
                 <input type="text" name="name" class="w-full outline-none rounded-xl py-1 px-4 focus:ring-1 focus:ring-primary focus:border-primary focus:border text-primary block mb-3" autocomplete="off">
                 <label for="pelajaran" class="w-full font-semibold text-dark mb-3 block text-lg">Mata Pelajaran</label>
                 <input type="text" name="pelajaran" class="w-full outline-none rounded-xl py-1 px-4 focus:ring-1 focus:ring-primary focus:border-primary focus:border text-primary block mb-3" autocomplete="off">
-                <label for="wali" class="w-full font-semibold text-dark mb-3 block text-lg">Wali kelas</label>
+                <label for="wali" class="w-full font-semibold text-dark mb-3 block text-lg">Guru Mata Pelajaran</label>
                 <input type="text" name="wali" class="w-full outline-none rounded-xl py-1 px-4 focus:ring-1 focus:ring-primary focus:border-primary focus:border text-primary block mb-3" autocomplete="off">
                 <label for="nip" class="w-full font-semibold text-dark mb-3 block text-lg">NIP</label>
                 <input type="number" name="nip" class="w-full outline-none rounded-xl py-1 px-4 focus:ring-1 focus:ring-primary focus:border-primary focus:border text-primary block mb-3" autocomplete="off">

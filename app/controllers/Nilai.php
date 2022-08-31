@@ -9,8 +9,10 @@ class Nilai extends Controller
 		$this->view('nilai/rekap', $data);
 	}
 
-	public function nilai_akhir()
+	public function nilai_akhir($kelas)
 	{
-		$this->view('nilai/nilai');
+		$data['kelas'] = $this->model('Absensi_model')->getClassByName($kelas);
+		$data['siswa'] = $this->model('Kelas_model')->getDataSiswa($kelas);
+		$this->view('nilai/nilai', $data);
 	}
 }
