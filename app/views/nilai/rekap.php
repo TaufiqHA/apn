@@ -80,7 +80,7 @@
                     <?php 
 
                         $jumlah = $jumlah/8;
-                        echo $jumlah;
+                        echo floor($jumlah);
 
                      ?>
                 </td>

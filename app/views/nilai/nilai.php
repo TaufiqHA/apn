@@ -68,7 +68,7 @@
 
                             $jumlah = $siswa['uh1'] + $siswa['uh2'] + $siswa['uh3'] + $siswa['t1'] + $siswa['t2'] + $siswa['t3'] + $siswa['pts'] + $siswa['pas'];
                             $jumlah /=8;
-                            echo $jumlah;    
+                            echo floor($jumlah);    
 
                          ?>
 
@@ -99,7 +99,7 @@
 
                             $jumlah1 = $siswa['t1'] + $siswa['t2'] + $siswa['t3'];
                             $jumlah1 /=3;
-                            echo $jumlah1;    
+                            echo floor($jumlah1);    
 
                          ?>
                     </td>
