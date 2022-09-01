@@ -11,7 +11,7 @@ class Absensi extends Controller
 		$this->view('templates/footer');
 	}
 
-	public function absensi($kelas)
+	public function absen($kelas)
 	{
 		$data['judul'] = 'Absensi';
 		$data['kelas'] = $kelas;
@@ -40,7 +40,7 @@ class Absensi extends Controller
 		$absen->absenCount($data);
 		$absen1 = $absen->ubahAbsen($data);
 		if ($absen1 === true) {
-			$this->absensi($data['kelas']);
+			$this->absen($data['kelas']);
 		}
 	}
 }
