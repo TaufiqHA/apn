@@ -60,3 +60,15 @@ $('#close-button').on('click', function()
     $('#unduh').removeClass('scale-1');
     $('#unduh').addClass('scale-0');
 })
+
+$('#deskripsi-button').on('click', function()
+{
+    $('#deskripsi').removeClass('scale-0');
+    $('#deskripsi').addClass('scale-1');
+})
+
+$('#close-deskripsi').on('click', function()
+{
+    $('#deskripsi').removeClass('scale-1');
+    $('#deskripsi').addClass('scale-0');
+})

@@ -37,6 +37,7 @@ class Absensi extends Controller
 		$data['siswa'] = $_POST;
 		$absen = $this->model('Absensi_model');
 		$data['count'] = $absen->getDataSiswa($data['kelas']);
+		$absen->absenCount($data);
 		$absen1 = $absen->ubahAbsen($data);
 		if ($absen1 === true) {
 			$this->absensi($data['kelas']);

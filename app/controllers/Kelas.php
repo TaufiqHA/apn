@@ -53,4 +53,15 @@ class Kelas extends Controller
 			$this->index();
 		}
 	}
+
+	public function tambahDesk($id, $kelas)
+	{
+		$data['id'] = $id;
+		$data['kelas'] = $kelas;
+		$data['desk'] = $_POST;
+		$desk = $this->model('Kelas_model')->tambah_desk($data);
+		if ($desk === true) {
+			$this->inputSiswa($kelas);
+		}
+	}
 }

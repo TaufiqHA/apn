@@ -38,7 +38,7 @@
         </div>
     </section>
     <section class="w-full mt-5">
-        <table class="tabel_nilai">
+        <table class="text-[12px] font-serif ">
             <tr>
                 <th colspan="3">Nomor</th>
                 <th rowspan="2" width="250px">Nama Peserta Didik</th>
@@ -63,12 +63,68 @@
                     <td><?php echo $siswa['nis'] ?></td>
                     <td><?php echo $siswa['nisn'] ?></td>
                     <td><?php echo $siswa['name'] ?></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>
+                        <?php 
+
+                            $jumlah = $siswa['uh1'] + $siswa['uh2'] + $siswa['uh3'] + $siswa['t1'] + $siswa['t2'] + $siswa['t3'] + $siswa['pts'] + $siswa['pas'];
+                            $jumlah /=8;
+                            echo $jumlah;    
+
+                         ?>
+
+                    </td>
+                    <td>
+                        <?php 
+
+                            switch (true) {
+                                case $jumlah < 60 :
+                                    echo 'D';
+                                    break;
+                                case $jumlah < 80 :
+                                    echo 'C';
+                                    break;
+                                case $jumlah < 95 :
+                                    echo 'B';
+                                    break;
+                                case $jumlah < 100 :
+                                    echo 'A';
+                                    break;
+                            }
+
+                         ?>
+                    </td>
+                    <td><?php echo $siswa['pengetahuan'] ?></td>
+                    <td>
+                        <?php 
+
+                            $jumlah1 = $siswa['t1'] + $siswa['t2'] + $siswa['t3'];
+                            $jumlah1 /=3;
+                            echo $jumlah1;    
+
+                         ?>
+                    </td>
+                    <td>
+                        <?php 
+
+                            switch (true) {
+                                case $jumlah1 < 60 :
+                                    echo 'D';
+                                    break;
+                                case $jumlah1 < 80 :
+                                    echo 'C';
+                                    break;
+                                case $jumlah1 < 95 :
+                                    echo 'B';
+                                    break;
+                                case $jumlah1 < 100 :
+                                    echo 'A';
+                                    break;
+                            }
+
+                         ?>
+                             
+                    </td>
+                    <td><?php echo $siswa['keterampilan'] ?></td>
                 </tr>
             <?php endforeach; ?>
         </table>

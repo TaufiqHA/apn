@@ -113,9 +113,9 @@
                     <td><?php echo $siswa['t3'] ?></td>
                     <td><?php echo $siswa['pts'] ?></td>
                     <td><?php echo $siswa['pas'] ?></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td><?php echo $siswa['A'] ?></td>
+                    <td><?php echo $siswa['I'] ?></td>
+                    <td><?php echo $siswa['S'] ?></td>
                     <td></td>
                 </tr>
             <?php endforeach; ?>

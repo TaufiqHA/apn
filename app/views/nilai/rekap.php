@@ -24,7 +24,7 @@
                     <h2 class="font-bold font-serif text-[12px] ">Kelas</h2>
                     <h2 class="font-bold font-serif text-[12px]">Semester</h2>
                 </div>
-                <div class="ml-5 text-[12px] font-bold">
+                <div class="ml-5 text-[12px] font-bold font-serif">
                     <p>: <?php echo $data['kelas']['kelas'] ?></p>
                     <p>: <?php echo $data['kelas']['semester'] ?></p>
                 </div>
@@ -32,7 +32,7 @@
         </div>
     </section>
     <section class="w-full mt-5">
-        <table class="tabel_nilai">
+        <table class="text-[12px] font-serif ">
             <tr>
                 <th colspan="3">Nomor</th>
                 <th rowspan="2" width="250px">Nama Perserta Didik</th>
@@ -68,8 +68,22 @@
                 <td><?php echo $siswa['t3'] ?></td>
                 <td><?php echo $siswa['pts'] ?></td>
                 <td><?php echo $siswa['pas'] ?></td>
-                <td></td>
-                <td></td>
+                <td>
+                    <?php 
+
+                        $jumlah = $siswa['uh1'] + $siswa['uh2'] + $siswa['uh3'] + $siswa['t1'] + $siswa['t2'] + $siswa['t3'] + $siswa['pts'] + $siswa['pas'];
+                        echo $jumlah;    
+
+                     ?>
+                </td>
+                <td>
+                    <?php 
+
+                        $jumlah = $jumlah/8;
+                        echo $jumlah;
+
+                     ?>
+                </td>
                 <td></td>
             </tr>
            <?php endforeach ?>

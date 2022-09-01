@@ -22,7 +22,9 @@ class Kelas_model
 			t3 VARCHAR(5),
 			pts VARCHAR(5),
 			pas VARCHAR(5),
-			deskripsi VARCHAR(200))
+			pengetahuan VARCHAR(200),
+			keterampilan VARCHAR(200)
+			)
 			');
 		$this->db->execute();
 		return true;
@@ -60,7 +62,10 @@ class Kelas_model
 			t2 CHAR(2),
 			t3 CHAR(2),
 			pts CHAR(2),
-			pas CHAR(2)
+			pas CHAR(2),
+			A CHAR(2),
+			I CHAR(2),
+			S CHAR(2)
 	)');
 		$this->db->execute();
 	}
@@ -91,7 +96,7 @@ class Kelas_model
 
 	public function tambahSiswa($data)
 	{
-		$this->db->query('INSERT INTO ' . $data['kelas'] . '(id, name, nis, nisn) VALUES ("", :name, :nis, :nisn)');
+		$this->db->query('INSERT INTO ' . $data['kelas'] . '(id, name, nis, nisn, uh1, uh2, uh3, t1, t2, t3, pts, pas) VALUES ("", :name, :nis, :nisn, 0, 0, 0, 0, 0, 0, 0, 0)');
 		$this->db->bind('name', $data['siswa']['name']);
 		$this->db->bind('nis', $data['siswa']['nis']);
 		$this->db->bind('nisn', $data['siswa']['nisn']);
@@ -101,7 +106,7 @@ class Kelas_model
 
 	public function tambahAbsensi($data)
 	{
-		$this->db->query('INSERT INTO ' . $data['kelas'] . "_absen (id, nama, nis, nisn) " . ' VALUES ("", :nama, :nis, :nisn)');
+		$this->db->query('INSERT INTO ' . $data['kelas'] . "_absen (id, nama, nis, nisn, A, I, S) " . ' VALUES ("", :nama, :nis, :nisn, 0, 0, 0)');
 		$this->db->bind('nama', $data['siswa']['name']);
 		$this->db->bind('nis', $data['siswa']['nis']);
 		$this->db->bind('nisn', $data['siswa']['nisn']);
@@ -136,5 +141,15 @@ class Kelas_model
 
 		$split = explode(" ", $tanggal);
 		return $split[0] . " " . $bulan[$split[1]] . " " . $split[2];
+	}
+
+	public function tambah_desk($data)
+	{
+		$this->db->query('UPDATE ' . $data['kelas'] . ' SET pengetahuan = :pengetahuan, keterampilan = :keterampilan WHERE id = :id');
+		$this->db->bind('pengetahuan', $data['desk']['pengetahuan']);
+		$this->db->bind('keterampilan', $data['desk']['keterampilan']);
+		$this->db->bind('id', $data['id']);
+		$this->db->execute();
+		return true;
 	}
 }

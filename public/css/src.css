@@ -27,7 +27,3 @@ th {
 .tabel {
   @apply text-[7px] font-serif font-semibold;
 }
-
-.tabel_nilai {
-  @apply text-[12px] font-serif font-semibold;
-}
