@@ -10,25 +10,16 @@
                 <div class="w-full self-center px-4 mt-20 md:w-1/2 lg:w-1/2 flex flex-col items-center">
                     <?php if (!empty($data['siswa'])) : ?>
                         <?php foreach($data['siswa'] as $siswa) : ?>
-                            <div class="w-[300px] h-[53px] rounded-full border-[0.5px] border-black px-2 flex items-center mb-7 shadow-xl hover:cursor-pointer" id="deskripsi-button">
-                                <span class="float-left pl-2 font-bold text-sm text-slate-600 uppercase"><?php echo $siswa['name'] ?> </span>
+                            <div class="w-[300px] h-[53px] rounded-full border-[0.5px] border-black px-2 flex items-center mb-7 shadow-xl hover:cursor-pointer">
+                                <span class="float-left pl-2 font-bold text-sm text-slate-600 uppercase"><?php echo $siswa['name'] ?></span>
                             </div>
-                            <!-- modal-box start -->
-                                <div class=" w-[300px] right-1/2 translate-x-1/2 absolute flex justify-center top-96 scale-0 transition duration-300 lg:w-[500px]" id="deskripsi">
-                                    <div class="w-full bg-slate-200 self-center absolute p-5 rounded-xl shadow-2xl flex flex-col items-center justify-center">
-                                        <img src="<?php echo BASEURL; ?>/public/img/close.svg" alt="..." class="absolute right-3 top-3 cursor-pointer w-[20px] lg:w-[25px]" id="close-deskripsi">
-                                        <h2 class="font-semibold mb-3 text-primary lg:font-bold ">DESKRIPSI</h2>
-                                        <form action="<?php echo BASEURL; ?>/public/kelas/tambahDesk/<?php echo $siswa['id'] ?>/<?php echo $data['kelas'] ?>" method="post" class="w-full px-8 flex flex-col items-center">
-                                        <label for="pengetahuan" class="w-full font-semibold text-dark mb-3 block text-lg">PENGETAHUAN</label>
-                                        <textarea class="w-full outline-none rounded-xl py-1 px-4 focus:ring-1 focus:ring-primary focus:border-primary focus:border text-primary block mb-3 h-28" name="pengetahuan"></textarea>
-                                        <label for="keterampilan" class="w-full font-semibold text-dark mb-3 block text-lg">KETERAMPILAN</label>
-                                        <textarea class="w-full outline-none rounded-xl py-1 px-4 focus:ring-1 focus:ring-primary focus:border-primary focus:border text-primary block mb-3 h-28" name="keterampilan"></textarea>
-                                        <button class="w-1/2 bg-primary py-2 px-5 rounded-full font-semibold text-white">TAMBAH</button>
-                                    </form>
-                                    </div>
-                                </div>
-                                <!-- modal-box end -->
-
+                            <form action="<?php echo BASEURL; ?>/public/kelas/tambahDesk/<?php echo $siswa['id'] ?>/<?php echo $data['kelas'] ?>" method="post" class="w-full px-8 flex flex-col items-center lg:w-1/2" id="form">
+                                <label for="pengetahuan" class="w-full font-semibold text-dark mb-3 block text-lg">PENGETAHUAN</label>
+                                <textarea class="w-full outline-none rounded-xl py-1 px-4 focus:ring-1 focus:ring-primary focus:border-primary focus:border text-primary block mb-3 h-28 border border-black" name="pengetahuan"></textarea>
+                                <label for="keterampilan" class="w-full font-semibold text-dark mb-3 block text-lg">KETERAMPILAN</label>
+                                <textarea class="w-full outline-none rounded-xl py-1 px-4 focus:ring-1 focus:ring-primary focus:border-primary focus:border text-primary block mb-3 h-28 border border-black" name="keterampilan"></textarea>
+                                <button class="w-1/2 bg-primary py-2 px-5 rounded-full font-semibold text-white mb-5">TAMBAH</button>
+                            </form>
                         <?php endforeach; ?>
                     <?php endif; ?>
                     <?php if (empty($data['siswa'])) : ?>
