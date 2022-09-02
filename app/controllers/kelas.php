@@ -15,7 +15,7 @@ class Kelas extends Controller
 	{
 		$data = $_POST;
 		$model = $this->model('Kelas_model');
-		$model = $model->tambahKelas($data);
+		$model->tambahKelas($data);
 		$model->tambahAbsen($data);
 		$model1 = $model->className($data);
 		if ($model1 === true) {
