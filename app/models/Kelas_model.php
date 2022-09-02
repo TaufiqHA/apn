@@ -27,7 +27,6 @@ class Kelas_model
 			)
 			');
 		$this->db->execute();
-		return true;
 	}
 
 	public function tambahAbsen($data)
@@ -72,7 +71,7 @@ class Kelas_model
 
 	public function className($data)
 	{
-		$this->db->query('INSERT INTO nama_kelas VALUES ("", :kelas, :pelajaran, :wali, :nip, :semester, :ta)');
+		$this->db->query('INSERT INTO nama_kelas (id, kelas, mt, wk, nip, semester, ta) VALUES ("", :kelas, :pelajaran, :wali, :nip, :semester, :ta)');
 		$this->db->bind('kelas', $data['name']);
 		$this->db->bind('pelajaran', $data['pelajaran']);
 		$this->db->bind('wali', $data['wali']);
@@ -80,6 +79,7 @@ class Kelas_model
 		$this->db->bind('semester', $data['semester']);
 		$this->db->bind('ta', $data['ta']);
 		$this->db->execute();
+		return true;
 	}
 
 	public function getClass()

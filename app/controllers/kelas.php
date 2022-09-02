@@ -15,9 +15,9 @@ class Kelas extends Controller
 	{
 		$data = $_POST;
 		$model = $this->model('Kelas_model');
-		$model1 = $model->tambahKelas($data);
+		$model = $model->tambahKelas($data);
 		$model->tambahAbsen($data);
-		$model->className($data);
+		$model1 = $model->className($data);
 		if ($model1 === true) {
 			header('Location: ' . BASEURL . "/public/kelas/index");
 			}
