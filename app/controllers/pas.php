@@ -1,13 +1,8 @@
 <?php 
 
-class Deskripsi
+class PAS
 {
 	public function index()
-	{
-
-	}
-
-	public function listSiswa()
 	{
 
 	}
