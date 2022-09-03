@@ -1,10 +1,10 @@
 <?php
 
-const BASEURL = 'http://apn.skom.id';
+const BASEURL = 'http://localhost:8080/apn';
 
 //database;
 
 const HOST = 'localhost';
-const DBNAME = 'u6hueknp_apn';
-const USER = 'u6hueknp_apn';
-const PASS = '4mn-kfz2ZVr]';
+const DBNAME = 'apn';
+const USER = 'root';
+const PASS = '';
