@@ -51,5 +51,12 @@ $('#close-modal-box-siswa').on('click', function()
 
 $('#change').on('click', function()
 {
-    
+    $($(this).data('target')).hide();
+
+    const id = $(this).data('id');
+
+    $.ajax({
+        url: 'http://localhost/apn/public/siswa/ubahSiswa',
+
+    })   
 })

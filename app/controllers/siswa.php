@@ -10,8 +10,5 @@ class Siswa extends Controller
 		$this->view('templates/footer');
 	}
 
-	public function listKelas()
-	{
-		
-	}
+	
 }
