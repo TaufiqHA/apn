@@ -56,7 +56,7 @@ $('#change').on('click', function()
     const id = $(this).data('id');
 
     $.ajax({
-        url: 'http://localhost/apn/public/siswa/ubahSiswa',
+        url: 'http://localhost:8080/apn/public/siswa/ubahSiswa',
 
     })   
 })
