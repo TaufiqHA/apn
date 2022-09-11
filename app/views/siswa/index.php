@@ -10,10 +10,10 @@
             <div class="w-full self-center px-4 mt-20 md:w-1/2 lg:w-1/2 flex flex-col items-center">
                 <?php if (!empty($data['siswa'])) : ?>
                     <?php foreach ($data['siswa'] as $siswa) : ?>
-                        <div class="w-[300px] h-[53px] rounded-full border-[0.5px] border-black px-2 flex items-center mb-7 shadow-xl hover:cursor-pointer">
+                        <div class="w-[300px] h-[53px] rounded-full border-[0.5px] border-black px-2 flex justify-evenly items-center mb-7 shadow-xl hover:cursor-pointer">
                             <span class="float-left pl-2 font-bold text-sm text-slate-600 uppercase"><?php echo $siswa['name'] ?></span>
-                            <span>
-                                <img src="<?php BASEURL; ?>/public/img/change.svg">
+                            <span class="w-4 h-4 z-999" data-id="<?php echo $siswa['id'] ?>" id="change">
+                                <img src="<?php echo BASEURL; ?>/public/img/change.svg">
                             </span>
                         </div>
                         <form action="<?php echo BASEURL; ?>/public/kelas/tambahDesk/<?php echo $siswa['id'] ?>/<?php echo $data['kelas'] ?>" method="post" class="w-full px-8 flex flex-col items-center lg:w-1/2" id="form">

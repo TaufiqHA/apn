@@ -48,3 +48,8 @@ $('#close-modal-box-siswa').on('click', function()
     $('#modal-box-siswa').removeClass('scale-1');
     $('#modal-box-siswa').addClass('scale-0');
 })
+
+$('#change').on('click', function()
+{
+    
+})
