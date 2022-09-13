@@ -41,6 +41,9 @@ $('#button-tambah-siswa').on('click', function()
 {
     $('#modal-box-siswa').removeClass('scale-0');
     $('#modal-box-siswa').addClass('scale-1');
+
+    $('#header').html('TAMBAH SISWA');
+    $('#button_modal').html('TAMBAH');
 })
 
 $('#close-modal-box-siswa').on('click', function()
@@ -49,14 +52,15 @@ $('#close-modal-box-siswa').on('click', function()
     $('#modal-box-siswa').addClass('scale-0');
 })
 
-$('#change').on('click', function()
-{
-    $($(this).data('target')).hide();
+let change = document.querySelectorAll('#change');
 
-    const id = $(this).data('id');
+for (let i = 0; i <= change.length; i++) {
+    change[i].addEventListener('click', function()
+    {
+        $('#modal-box-siswa').removeClass('scale-0');
+        $('#modal-box-siswa').addClass('scale-1');
 
-    $.ajax({
-        url: 'http://localhost:8080/apn/public/siswa/ubahSiswa',
-
-    })   
-})
+        $('#header').html('UBAH SISWA');
+        $('#button_modal').html('UBAH');
+    })
+}
