@@ -43,6 +43,7 @@
         <img src="<?php echo BASEURL; ?>/public/img/close.svg" alt="..." class="absolute right-3 top-3 cursor-pointer w-[20px] lg:w-[25px]" id="close-modal-box-siswa">
         <form action="<?php echo BASEURL; ?>/public/kelas/tambahSiswa/<?php echo $data['kelas'] ?>" method="post" class="w-full px-8 flex flex-col items-center">
             <input type="hidden" name="id" id="id">
+            <input type="hidden" name="kelas" value="<?php echo $data['kelas'] ?>">
             <h2 class="font-semibold mb-3 text-primary lg:font-bold " id="header">TAMBAH SISWA</h2>
             <label for="name" class="w-full font-semibold text-dark mb-3 block text-lg">Nama</label>
             <input type="text" name="name" class="w-full outline-none rounded-xl py-1 px-4 focus:ring-1 focus:ring-primary focus:border-primary focus:border text-primary block mb-3" autocomplete="off" required id="name">

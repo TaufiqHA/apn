@@ -18,4 +18,11 @@ class Siswa extends Controller
 	}
 
 	public function ubah()
+	{
+		$data = $_POST;
+		$change = $this->model('Kelas_model')->change($data);
+		if ($change === true) {
+			header('Location: ' . BASEURL . '/public/kelas/inputSiswa/' . $data['kelas']);
+		}
+	}
 }

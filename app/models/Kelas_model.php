@@ -159,4 +159,15 @@ class Kelas_model
 		$this->db->execute();
 		return true;
 	}
+
+	public function change($data)
+	{
+		$this->db->query('UPDATE ' . $data['kelas'] . ' SET name = :name, nis = :nis, nisn = :nisn WHERE id = :id');
+		$this->db->bind('id', $data['id']);
+		$this->db->bind('name', $data['name']);
+		$this->db->bind('nis', $data['nis']);
+		$this->db->bind('nisn', $data['nisn']);
+		$this->db->execute();
+		return true;
+	}
 }
