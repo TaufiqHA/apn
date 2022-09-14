@@ -94,6 +94,13 @@ class Kelas_model
 		return $this->db->resultSet();
 	}
 
+	public function getDataById($data)
+	{
+		$this->db->query('SELECT * FROM ' . $data['kelas'] . ' WHERE id = :id');
+		$this->db->bind('id', $data['id']);
+		return $this->db->single();
+	}
+
 	public function tambahSiswa($data)
 	{
 		$this->db->query('INSERT INTO ' . $data['kelas'] . '(id, name, nis, nisn, uh1, uh2, uh3, t1, t2, t3, pts, pas) VALUES ("", :name, :nis, :nisn, 0, 0, 0, 0, 0, 0, 0, 0)');

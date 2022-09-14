@@ -44,6 +44,10 @@ $('#button-tambah-siswa').on('click', function()
 
     $('#header').html('TAMBAH SISWA');
     $('#button_modal').html('TAMBAH');
+
+    $('#name').val('');
+    $('#nis').val('');
+    $('#nisn').val('');
 })
 
 $('#close-modal-box-siswa').on('click', function()
@@ -62,5 +66,23 @@ for (let i = 0; i <= change.length; i++) {
 
         $('#header').html('UBAH SISWA');
         $('#button_modal').html('UBAH');
+        $('.modal form').attr('action', 'http://localhost:8080/apn/public/siswa/ubah');
+
+        const id = $(this).data('id');
+        const kelas = $(this).data('kelas');
+
+        $.ajax({
+            url: 'http://localhost:8080/apn/public/siswa/getDataSiswa',
+            data: {id : id, kelas : kelas},
+            method: 'post',
+            dataType: 'json',
+            success: function(data)
+            {
+                $('#id').val(data.id);
+                $('#name').val(data.name);
+                $('#nis').val(data.nis);
+                $('#nisn').val(data.nisn);
+            }
+        })
     })
 }

@@ -12,7 +12,7 @@
                     <?php foreach ($data['siswa'] as $siswa) : ?>
                         <div class="w-[300px] h-[53px] rounded-full border-[0.5px] border-black px-2 flex justify-evenly items-center mb-7 shadow-xl hover:cursor-pointer">
                             <span class="float-left pl-2 font-bold text-sm text-slate-600 uppercase"><?php echo $siswa['name'] ?></span>
-                            <span class="w-4 h-4 z-999" data-id="<?php echo $siswa['id'] ?>" data-target="#modal-box-siswa" id="change">
+                            <span class="w-4 h-4 z-999" data-id="<?php echo $siswa['id'] ?>" data-kelas="<?php echo $data['kelas'] ?>" id="change">
                                 <img src="<?php echo BASEURL; ?>/public/img/change.svg">
                             </span>
                         </div>
@@ -39,16 +39,17 @@
 
 <!-- modal-box start -->
 <div class=" w-[300px] right-1/2 translate-x-1/2 fixed flex justify-center top-96 scale-0 transition duration-300 lg:w-[500px]" id="modal-box-siswa">
-    <div class="w-full bg-slate-200 self-center absolute p-5 rounded-xl shadow-2xl flex justify-center">
+    <div class="w-full bg-slate-200 self-center absolute p-5 rounded-xl shadow-2xl flex justify-center modal">
         <img src="<?php echo BASEURL; ?>/public/img/close.svg" alt="..." class="absolute right-3 top-3 cursor-pointer w-[20px] lg:w-[25px]" id="close-modal-box-siswa">
         <form action="<?php echo BASEURL; ?>/public/kelas/tambahSiswa/<?php echo $data['kelas'] ?>" method="post" class="w-full px-8 flex flex-col items-center">
+            <input type="hidden" name="id" id="id">
             <h2 class="font-semibold mb-3 text-primary lg:font-bold " id="header">TAMBAH SISWA</h2>
             <label for="name" class="w-full font-semibold text-dark mb-3 block text-lg">Nama</label>
-            <input type="text" name="name" class="w-full outline-none rounded-xl py-1 px-4 focus:ring-1 focus:ring-primary focus:border-primary focus:border text-primary block mb-3" autocomplete="off" required>
+            <input type="text" name="name" class="w-full outline-none rounded-xl py-1 px-4 focus:ring-1 focus:ring-primary focus:border-primary focus:border text-primary block mb-3" autocomplete="off" required id="name">
             <label for="nis" class="w-full font-semibold text-dark mb-3 block text-lg">NIS</label>
-            <input type="text" name="nis" class="w-full outline-none rounded-xl py-1 px-4 focus:ring-1 focus:ring-primary focus:border-primary focus:border text-primary block mb-3" autocomplete="off" required>
+            <input type="text" name="nis" class="w-full outline-none rounded-xl py-1 px-4 focus:ring-1 focus:ring-primary focus:border-primary focus:border text-primary block mb-3" autocomplete="off" required id="nis">
             <label for="nisn" class="w-full font-semibold text-dark mb-3 block text-lg">NISN</label>
-            <input type="text" name="nisn" class="w-full outline-none rounded-xl py-1 px-4 focus:ring-1 focus:ring-primary focus:border-primary focus:border text-primary block mb-3" autocomplete="off" required>
+            <input type="text" name="nisn" class="w-full outline-none rounded-xl py-1 px-4 focus:ring-1 focus:ring-primary focus:border-primary focus:border text-primary block mb-3" autocomplete="off" required id="nisn">
             <button class="w-1/2 bg-primary py-2 px-5 rounded-full font-semibold text-white " id="button_modal">TAMBAH</button>
         </form>
     </div>
