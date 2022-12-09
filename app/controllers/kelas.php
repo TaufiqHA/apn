@@ -19,7 +19,7 @@ class Kelas extends Controller
 		$model->tambahAbsen($data);
 		$model1 = $model->className($data);
 		if ($model1 === true) {
-			header('Location: ' . BASEURL . "/public/kelas/index");
+			$this->index();
 			}
 	}
 
